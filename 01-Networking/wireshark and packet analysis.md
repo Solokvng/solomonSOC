@@ -33,5 +33,13 @@ ICMP(Internet Control Message Protocol) is a protocol used by networking devices
 I captured an ICMP packet by pinging '8.8.8.8'
 <img width="1366" height="715" alt="Capturing from Wi-Fi 11_20_2026 6_52_13 PM" src="https://github.com/user-attachments/assets/01097f78-573a-44c3-8974-78b510d6eb25" />
 
+### 5. Traceroute(Linux: traceroute, windows: tracert)
+This diagnostic command is used to track the exact data path and measure the transit, delays of data packets travelling from a device to a destination(server). When the Time To Live(TTL=1) sends an ICMP echo request packet to the destination with a TTL of 1, the router receives it, and the TTL decreases by 1 to 0, the router drops the packet and sends back an ICMP 'Time Exceeded" message. If TTL=2 then the router sends it to the ISP before it decreases to zero so the TTL increments occur by 1 until it gets to the final destination.
+<img width="1366" height="738" alt="Command Prompt 11_20_2026 8_11_29 PM" src="https://github.com/user-attachments/assets/e8ba6de8-5d3a-49db-812c-af9005a62df9" />
+I ran the tracert command in Command Prompt to a destination of 8.8.8.8, and I got the result above whilst also capturing packets in Wireshark. From the result, column 1 stands for hop number, columns 2- 4 stand for round-trip times in milliseconds for each attempt (3), and column 5 is the Router Hostname and IP.
+<img width="1366" height="715" alt="Capturing from Wi-Fi 11_20_2026 8_20_46 PM" src="https://github.com/user-attachments/assets/9247a7c2-a305-4852-8959-2a320b9e6fae" />
+I captured traffic using the tracert command and got a request timed out on one of the results but that doesnt necessarily mean that packets are being dropped just happens that some ISP configures their routers to silently drop ICMP packets to prevent DOS attacks while forwarding your data. the only problem is when a timeout starts at a specific hop and never recover.
+
+
 
 
