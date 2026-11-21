@@ -40,6 +40,12 @@ I ran the tracert command in Command Prompt to a destination of 8.8.8.8, and I g
 <img width="1366" height="715" alt="Capturing from Wi-Fi 11_20_2026 8_20_46 PM" src="https://github.com/user-attachments/assets/9247a7c2-a305-4852-8959-2a320b9e6fae" />
 I captured traffic using the tracert command and got a request timed out on one of the results but that doesnt necessarily mean that packets are being dropped just happens that some ISP configures their routers to silently drop ICMP packets to prevent DOS attacks while forwarding your data. the only problem is when a timeout starts at a specific hop and never recover.
 
+### 5. DHCP(Dynamic Host Configuration Protocol)
+DHCP automatically assigns IP addresses to devices when they connect to a network. i ran the command 'ipconfig /renew' in Command Prompt and captured traffic on Wireshark. I noticed the messages sent from the client to the DHCP server to get the IP address start with a 'DHCP Discover' sent by the client, the DHCP server responds with a 'DHCP Offer' message which contains the IP address, subnet mask, DNS server, default gateway and lease time. After this, the client responds with a 'DHCP Request' to accept the IP address offered by the DHCP server, the DHCP server responds with the final message 'DHCP Ack' to acknowledge the confirmation of assigning the IP address.
+<img width="1366" height="715" alt="Capturing from Wi-Fi 11_21_2026 9_56_05 AM" src="https://github.com/user-attachments/assets/db52ea72-fd74-4455-9dc4-94c29035e5f3" />
+<img width="1366" height="715" alt="Capturing from Wi-Fi 11_21_2026 10_15_21 AM" src="https://github.com/user-attachments/assets/c2c58133-3c1f-467d-8dd6-7a7899798284" /> 
+as seen in this picture above the messages shown are the process i got an IP address on my device
+
 
 
 
