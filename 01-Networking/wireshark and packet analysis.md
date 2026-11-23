@@ -46,6 +46,11 @@ DHCP automatically assigns IP addresses to devices when they connect to a networ
 <img width="1366" height="715" alt="Capturing from Wi-Fi 11_21_2026 10_15_21 AM" src="https://github.com/user-attachments/assets/c2c58133-3c1f-467d-8dd6-7a7899798284" /> 
 as seen in this picture above the messages shown are the process i got an IP address on my device
 
-
+### 6. HTTP(HyperText Transfer Protocol)
+used in communication between client and server the common method for a request is 'GET' which is used to request a resource while the server responds with a status code and the resources being requested.
+status codes include: 200: Ok, 201: Moved Permanently, 404: Not Found, 500: Internal Server Error
+<img width="1366" height="715" alt="_Adapter for loopback traffic capture 11_23_2026 6_20_12 PM" src="https://github.com/user-attachments/assets/2ce68657-ba53-4d2a-91a1-647affb6cadf" />
+i captured packets from a local server on wireshark from the packet capture we can see the GET request from the client and the response from the server with a status code. 
+HTTPS(HyperText Transfer Protocol Secure): uses SSL or TSL(
 
 
