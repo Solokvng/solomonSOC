@@ -52,5 +52,5 @@ status codes include: 200: Ok, 201: Moved Permanently, 404: Not Found, 500: Inte
 <img width="1366" height="715" alt="_Adapter for loopback traffic capture 11_23_2026 6_20_12 PM" src="https://github.com/user-attachments/assets/2ce68657-ba53-4d2a-91a1-647affb6cadf" />
 i captured packets from a local server on wireshark from the packet capture we can see the GET request from the client and the response from the server with a status code. 
 HTTPS(HyperText Transfer Protocol Secure): uses SSL or TSL(Transport Layer Security) to secure communication by encryption. a server sends it's digital certificate and public key to the client to verify the server identity,The client validates the certificate. It then generates a unique Session Key and encrypts it using the server's Public Key.The server uses its Private Key to decrypt the Session Key. A secure, authenticated connection is now established. in HTTPS All subsequent data (request and response) is sent through an "ENCRYPTED TUNNEL (SSL/TLS)".Even if intercepted, the data is scrambled (e.g., "SESSION KEY ENCRYPTION") and unreadable without the Session Key.
-
+HTTP traffic is sent using TCP port 80 whilst HTTPS uses TCP port 443
 
